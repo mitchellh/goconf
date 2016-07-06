@@ -45,10 +45,6 @@ func (c *ConfigFile) GetOptions(section string) (options []string, err error) {
 
 	options = make([]string, len(c.data[DefaultSection])+len(c.data[section]))
 	i := 0
-	for s, _ := range c.data[DefaultSection] {
-		options[i] = s
-		i++
-	}
 	for s, _ := range c.data[section] {
 		options[i] = s
 		i++
